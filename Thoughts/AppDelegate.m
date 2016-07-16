@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,31 +16,48 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//If your app is not running in the foreground, to handle the default action when a user just swipes or taps
+//on a notification, iOS launches your app in the foreground and calls the UIApplicationDelegate method
+//application:didFinishLaunchingWithOptions: passing in the local notification or the remote notification in
+//the options dictionary.
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     // Override point for customization after application launch.
+    UIUserNotificationType types = (UIUserNotificationType) (UIUserNotificationTypeBadge |
+                                                             UIUserNotificationTypeSound | UIUserNotificationTypeAlert);
+    ViewController* vc = [[ViewController alloc]init];
+    self.window.rootViewController = vc;
+    
+    UIUserNotificationSettings *mySettings =
+    [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    
+//    The first time an app calls the registerUserNotificationSettings: method, iOS prompts the
+//    user to allow
+//    the specified interactions. On subsequent launches, calling this method does not prompt the user.
+//    The user can change the notification settings for your app at any time using the Settings app. Because
+//    settings can change, always call the registerUserNotificationSettings: at launch time and use the
+//    application:didRegisterUserNotificationSettings: method to get the response.
+    [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+    
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    NSLog(@"In application:didRegisterUserNotificationSettings:");
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+//If your app is already in the foreground, iOS does not show the notification. Instead, to handle the
+//default action, it calls one of the UIApplicationDelegate methods application:didReceiveLocalNotification:
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    NSLog(@"application:didReceiveLocalNotification:");
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+- (void)application:(UIApplication *) application handleActionWithIdentifier: (NSString *) identifier
+    forLocalNotification: (NSDictionary *) notification
+    completionHandler: (void (^)()) completionHandler {
+    // Must be called when finished
+    completionHandler();
 }
 
 @end
