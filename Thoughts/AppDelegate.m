@@ -54,6 +54,7 @@
     NSLog(@"application:didReceiveLocalNotification:");
     
     SeeNFDetailsViewController* vc = [[SeeNFDetailsViewController alloc] init];
+    [vc setNFData: notification];
     self.window.rootViewController = vc;
 }
 

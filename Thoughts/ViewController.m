@@ -52,8 +52,8 @@
     UILocalNotification *notification = [[UILocalNotification alloc] init];
     notification.soundName = UILocalNotificationDefaultSoundName;
     notification.category = @"INVITE_CATEGORY";
-    notification.alertBody = @"hello world!!";
-    notification.alertTitle = @"hello title";
+    notification.alertBody = @"hello world BODY!!";
+    notification.alertTitle = @"hello title TITLE";
     notification.alertAction = @"hello action";
     
 //    Set the date and time that the operating system should deliver the notification. This is the fireDate

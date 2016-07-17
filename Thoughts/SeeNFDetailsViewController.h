@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SeeNFDetailsViewController : UIViewController
-
+- (void)setNFData : (UILocalNotification*) notification;
 @end
