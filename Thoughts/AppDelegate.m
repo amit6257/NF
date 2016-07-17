@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "SeeNFDetailsViewController.h"
 
 @interface AppDelegate ()
 
@@ -51,6 +52,9 @@
 //default action, it calls one of the UIApplicationDelegate methods application:didReceiveLocalNotification:
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     NSLog(@"application:didReceiveLocalNotification:");
+    
+    SeeNFDetailsViewController* vc = [[SeeNFDetailsViewController alloc] init];
+    self.window.rootViewController = vc;
 }
 
 - (void)application:(UIApplication *) application handleActionWithIdentifier: (NSString *) identifier

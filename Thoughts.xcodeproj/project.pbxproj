@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9625A6CE1D3AE35C00C32849 /* SeeNFDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9625A6CD1D3AE35C00C32849 /* SeeNFDetailsViewController.m */; };
 		96D491781D362FBE003ABB2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D491771D362FBE003ABB2D /* main.m */; };
 		96D4917B1D362FBE003ABB2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D4917A1D362FBE003ABB2D /* AppDelegate.m */; };
 		96D4917E1D362FBE003ABB2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D4917D1D362FBE003ABB2D /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9625A6CC1D3AE35C00C32849 /* SeeNFDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeeNFDetailsViewController.h; sourceTree = "<group>"; };
+		9625A6CD1D3AE35C00C32849 /* SeeNFDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeeNFDetailsViewController.m; sourceTree = "<group>"; };
 		96D491731D362FBE003ABB2D /* Thoughts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thoughts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D491771D362FBE003ABB2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96D491791D362FBE003ABB2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				96D491841D362FBE003ABB2D /* LaunchScreen.storyboard */,
 				96D491871D362FBE003ABB2D /* Info.plist */,
 				96D491761D362FBE003ABB2D /* Supporting Files */,
+				9625A6CC1D3AE35C00C32849 /* SeeNFDetailsViewController.h */,
+				9625A6CD1D3AE35C00C32849 /* SeeNFDetailsViewController.m */,
 			);
 			path = Thoughts;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96D4917E1D362FBE003ABB2D /* ViewController.m in Sources */,
+				9625A6CE1D3AE35C00C32849 /* SeeNFDetailsViewController.m in Sources */,
 				96D4917B1D362FBE003ABB2D /* AppDelegate.m in Sources */,
 				96D491781D362FBE003ABB2D /* main.m in Sources */,
 			);

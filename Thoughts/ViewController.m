@@ -31,9 +31,8 @@
     [self.view addSubview:scheduledNotification];
 }
 
-// If your app is already in the foreground, iOS does not show the notification. Instead, to handle the
-// default action, it calls one of the UIApplicationDelegate methods application:didReceiveLocalNotification:
-// This method tests this using a button click in the Application itself .
+// If your app is already in the foreground, iOS does not show the notification.
+// application:didReceiveLocalNotification: is called
 - (void)showLocalNotifications {
     //Defining a category of actions for a local notification
     UILocalNotification *notification = [[UILocalNotification alloc] init];
@@ -43,10 +42,11 @@
     notification.alertBody = @"hello world!!";
     notification.alertTitle = @"hello title";
     notification.alertAction = @"hello action";
-    //    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
 }
 
+//Instead, to handle the default action, it calls one of the UIApplicationDelegate methods
+//application:didReceiveLocalNotification:
 - (void)showScheduledLocalNotification {
     // Allocate and initialize a UILocalNotification object.
     UILocalNotification *notification = [[UILocalNotification alloc] init];

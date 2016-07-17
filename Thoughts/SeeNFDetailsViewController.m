@@ -1,0 +1,28 @@
+//
+//  SeeNFDetailsViewController.m
+//  Thoughts
+//
+//  Created by AMIT AGARWAL on 7/16/16.
+//  Copyright © 2016 AMIT AGARWAL. All rights reserved.
+//
+
+#import "SeeNFDetailsViewController.h"
+
+@interface SeeNFDetailsViewController ()
+
+@end
+
+@implementation SeeNFDetailsViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UITextView* tv = [[UITextView alloc]initWithFrame:CGRectMake(10, 40, 300, 300) textContainer:nil];
+    tv.backgroundColor = [UIColor lightGrayColor];
+    tv.text = @"asjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanajnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsanasjnvkajsnvkjsan";
+    
+    [self.view addSubview:tv];
+}
+
+@end
